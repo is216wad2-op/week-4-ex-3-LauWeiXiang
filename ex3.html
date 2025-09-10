@@ -8,7 +8,7 @@
       <p>Get it done today</p>
       
         <!-- add HTML code here -->
-      <input type="text" id="object"> 
+      <input type="text" id="userinbput"> 
       <button type="button" id="click" onclick="addList()">Enter</button>
 
       <ul id="listOfItems">
@@ -24,7 +24,7 @@
       
         // add code here
         function addList() {
-         var item = document.getElementById("object");
+         var item = document.getElementById("userinput");
          var ele = document.createElement("li");
          
          if (item.value.length > 0) {
