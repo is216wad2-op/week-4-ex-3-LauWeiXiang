@@ -8,8 +8,10 @@
       <p>Get it done today</p>
       
         <!-- add HTML code here -->
+      <input type="text" id="object"> 
+      <button type="button" id="click" onclick="addList()">Enter</button>
 
-      <ul>
+      <ul id="listOfItems">
          <li>Notebook</li>
          <li>Jello</li>
          <li>Spinach</li>
@@ -21,6 +23,18 @@
       <script>
       
         // add code here
+        function addList() {
+         var item = document.getElementById("object");
+         var ele = document.createElement("li");
+         
+         if (item.value.length > 0) {
+            var itemNode = document.createTextNode(item.value);
+            ele.appendChild(itemNode);
+            var list = document.getElementById("listOfItems");
+            list.appendChild(ele);
+            item.value = "";
+         }
+        }
 
       </script>
  
